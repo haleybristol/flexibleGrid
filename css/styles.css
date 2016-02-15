@@ -1,0 +1,158 @@
+body {
+  font-family: "cambria", "georgia", serif;
+}
+
+#logo {
+  background-image: url("../img/logo-bg.png");
+  background-repeat: no-repeat;
+  height: 284px;
+  width: 279px;
+  background-size: contain;
+  position: relative;
+}
+
+#logotype {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+#nav {
+  display:none;
+}
+
+#horizontal-nav {
+  width: 60%;
+  margin: 10px auto;
+}
+
+#horizontal-nav li {
+  font-size: 1em;
+  text-align: center;
+  float: left;
+  border-bottom: 1px solid black;
+  margin: 20px 0 0 12%;
+  height: 60px;
+}
+
+#horizontal-nav::after {
+  content: "";
+  display: table;
+  clear:both;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  float: left;
+  width: 30%;
+}
+
+.main {
+  float: right;
+  width: 65%;
+}
+
+li {
+  list-style: none;
+}
+
+.gallery img{
+  width: 15%;
+}
+
+h2 {
+  text-align: center;
+}
+
+#footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 940px) and (min-width: 800px) {
+  #horizontal-nav {
+    display: none;
+  }
+  #nav {
+    display: block;
+    text-align: center;
+  }
+  #nav li {
+    border-bottom: 1px solid black;
+    margin: 25px 0 25px;
+    padding-bottom: 25px;
+  }
+
+  #nav li:nth-child(1) {
+    border-top: 1px solid black;
+    padding-top: 25px;
+  }
+
+  .gallery img {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #logo {
+    background-image: none;
+    height: 150px;
+    width: 146px;
+    margin: 0 auto;
+  }
+
+  #logotype {
+    left: 0;
+  }
+
+  #horizontal-nav {
+    width: 70%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #horizontal-nav li {
+    margin: 10px 5%;
+    width: 20%;
+    height: 60px;
+  }
+
+  #horizontal-nav a {
+    font-size: .9em;
+  }
+
+  .menu {
+    float: none;
+    width: 100%;
+  }
+
+  .main {
+    float: none;
+    width: 100%;
+  }
+
+  .container {
+    width: 95%;
+    margin: auto;
+  }
+
+  .gallery img {
+    width: 40%;
+    margin: 4%;
+  }
+
+  .gallery {
+    width: 90%;
+    margin: auto;
+  }
+}
+/*Clearfix*/
+
+.cf::after {
+  content: "";
+  display: table;
+  clear: both;
+}
